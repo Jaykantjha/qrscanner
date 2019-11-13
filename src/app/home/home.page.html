@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      QR/ Barcode Scanner
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content ion-padding>
+
+	<div class="text-align:center;">
+		  <h1>Click Button To Scan</h1>
+ 
+  <ion-button (click)="scanCode()">
+    Scan Code
+  </ion-button>
+
+	</div> 
+  
+    
+
+  <div class="info-content"  *ngIf="scannedData">
+  	<p>
+      Scanned Code Text : <b>{{ scannedData["text"] }}</b>
+    </p>
+    <p>
+      Scanned Code Format : <b>{{ scannedData["format"] }}</b>
+    </p>
+  	<div style="text-align: center;">
+  	<img src="{{'assets/'+loadedInfo['ओळखपत्र क्रमांक']+'.jpg'}}"/>
+  </div>
+  <span>ओळखपत्र क्रमांक : {{loadedInfo['ओळखपत्र क्रमांक']}}</span>
+  <span>संदर्भ : {{loadedInfo['संदर्भ']}}</span>
+  <span>नांव : {{loadedInfo['नांव']}}</span>
+  <span>वैधता (पर्यंत) : {{loadedInfo['वैधता (पर्यंत)']}}</span>
+  <span>पथविक्रेत्याची वर्गवारी : {{loadedInfo['पथविक्रेत्याची वर्गवारी']}}</span>
+  <span>व्यवसायाचे ठिकाण : {{loadedInfo['व्यवसायाचे ठिकाण']}}</span>
+  <span>भ्रमणध़्वनी : {{loadedInfo['भ्रमणध़्वनी']}}</span>
+  <span>जन्मदिनांक : {{loadedInfo['जन्मदिनांक']}}</span>
+  <span>लिंग : {{loadedInfo['लिंग']}}</span>
+  <span>जारी केल्याचा दिनांक : {{loadedInfo['जारी केल्याचा दिनांक']}}</span>
+  <span>पथविक्रेत्याचा निवासी पत्ता : {{loadedInfo['पथविक्रेत्याचा निवासी पत्ता']}}</span>
+
+  </div>
+
+
+</ion-content>
